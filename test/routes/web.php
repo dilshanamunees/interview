@@ -13,12 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
-/*Route::group(['namespace' => 'App\Http\Controllers'], function () {
+});*/
+
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
     /**
      * Home Routes
      */
-   /* Route::get('/', 'HomeController@index')->name('home.index');
-});*/
+    Route::get('/', 'HomeController@index')->name('home.index');
+});
