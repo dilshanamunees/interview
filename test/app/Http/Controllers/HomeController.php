@@ -43,15 +43,35 @@ class HomeController extends Controller
         ]);
 
 
+        //laravel pipe line to get employee name with maxximum sales from collection 
+
+        //find employee name with array of sales from collection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $posts = app(Pipeline::class)
             ->send($employees)
             ->through([
 
                 \App\Filters\Highest::class
             ])
-            ->thenReturn()
-            ->get();
+            ->thenReturn();
 
-        return view('welcome', compact('posts'));
+
+        return view('welcome1', compact('posts'));
     }
 }
